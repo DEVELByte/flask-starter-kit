@@ -4,8 +4,9 @@ Its a base skeleton for new python web applications.
 Dependencies :
 
 	git clone git://github.com/DEVELByte/flask-with-mvc.git
-	cd flask-with-mcv
-  pip install -r requirements.txt
+	cd flask-with-mvc
+	pip install -r requirements.txt
+
 
 To run:
 
