@@ -8,10 +8,7 @@
 from flask import flash
 
 
-class Printer(object):
+class Greet(object):
 
-    def show_string(self, text):
-        if text == '':
-            flash("You didn't enter any text to flash")
-        else:
-            flash(text + "!!!")
+    def show_string(self):
+            return "Hello World"
