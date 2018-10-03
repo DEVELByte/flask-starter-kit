@@ -5,11 +5,35 @@
 # Author : NareN
 # git    : https://github.com/DEVELByte
 # =======================================
-
+import logging
 import os
-from application import app
-from app_config import PORT, IP
+import re
+import argparse
+from develbyte import create_app
+
+logger = logging.getLogger("default")
+
+
+def purge(directory, pattern):
+    for f in os.listdir(directory):
+        if re.search(pattern, f):
+            os.remove(os.path.join(directory, f))
+
+
+def arguments():
+    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser.add_argument('--configName', '-c', help='pass a absolute path to the config file')
+    return parser.parse_args()
+
+
+def print_config(config):
+    for _config in config.keys():
+        logger.info("{key: <50}: {value}".format(key=_config, value=config[_config]))
+
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", PORT))
-    app.run(IP, port=port)
+    purge(".", "nohup.out")
+    args = arguments()
+    app = create_app(args.configName)
+    print_config(app.config)
+    app.run(port=app.config.PORT, threaded=True)

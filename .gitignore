@@ -1,9 +1,14 @@
 .idea
+.vscode
 .env
 .flaskenv
 *.pyc
 *.pyo
+*.log
+*.logs
+logs/
 env/
+__pycache__/
 env*
 dist/
 build/
@@ -21,4 +26,7 @@ htmlcov/
 .coverage
 .coverage.*
 *,cover
-
+*.out
+*active_sessions.json
+*active_genomes.json
+*chat_data_response_*

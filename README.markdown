@@ -3,8 +3,8 @@ Its a base skeleton for new python web applications.
 
 Dependencies :
 
-	git clone git://github.com/DEVELByte/flask-with-mvc.git
-	cd flask-with-mvc
+	git clone https://github.com/DEVELByte/flask-starter-kit.git
+	cd flask-starter-kit
 	pip install -r requirements.txt
 
 

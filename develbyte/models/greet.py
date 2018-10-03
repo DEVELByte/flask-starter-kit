@@ -9,6 +9,5 @@ from flask import flash
 
 
 class Greet(object):
-
     def show_string(self):
             return "Hello World"

@@ -1,0 +1,11 @@
+production:
+    PORT: 8080
+    SECRET_KEY: develbyte-production
+    TEMPLATE_PATH : ./application/templates
+    STATIC_PATH: ./application/static
+    DEBUG: false
+    TESTING: flase
+    LOG_LEVEL: INFO
+    LOG_FORMATTER: "[%(asctime)s] %(levelname)s in %(filename)s:%(lineno)d - %(message)s"
+    LOG_PATH: ./logs/
+    LOG_FILE_NAME: develbyte
