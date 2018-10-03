@@ -1,5 +1,10 @@
-A project build on python flask micro api framework, following MVC pattern.
-Its a base skeleton for new python web applications.
+# flask-starter-kit
+
+A starter-kit for a Flask based application.
+
+## Features
+- Multiple configurations (testing, staging, production, etc...)
+- logging configuration handled through the config file 
 
 Dependencies :
 
@@ -11,3 +16,9 @@ Dependencies :
 To run:
 
     python runserver.py
+    or 
+    ./runserver.py
+    or
+    ./runserver.py path/to/config.yml
+    
+
